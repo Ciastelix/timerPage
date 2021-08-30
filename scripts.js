@@ -7,15 +7,14 @@ const timeLeft = () => {
     let hook = document.getElementById("timer")
     if (study) {
         time += 1
-        hook.innerHTML = time
+        hook.innerHTML = 1500 - time
     }
     else {
         breakTime += 1
-        hook.innerHTML = breakTime
+        hook.innerHTML = 600 - breakTime
     }
 
 }
-// var ina = setInterval(timeLeft, 1000)
 const changeHeader = () => {
     let hook = document.getElementById("header");
     study ? hook.innerHTML = "It's time to study be gone!" : hook.innerHTML = "It's break time go wild!"
