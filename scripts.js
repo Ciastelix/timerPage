@@ -25,18 +25,18 @@ const changeHeader = () => {
 const start = () => {
     changeHeader();
     window.setInterval(function () {
-        if (time < 1500 && study || breakTime < 600 && !study) {
+        if (time < 25 && study || breakTime < 10 && !study) {
             timeLeft();
 
 
         }
-        else if (time === 1500 && study) {
+        else if (time === 25 && study) {
             document.getElementById("alarm").play();
             study = false;
             time = 0;
             changeHeader();
         }
-        else if (!study && breakTime === 600) {
+        else if (!study && breakTime === 10) {
             document.getElementById("alarm").play();
             study = true;
             breakTime = 0;
