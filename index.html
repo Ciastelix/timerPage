@@ -5,36 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>.header{
-    font-size: 3em;
-    clear: both;
-    width: 100%;
-    text-align: center;
-}
-.time{
-    font-size: 2em;
-    clear: both;
-}
-.timer{
-    font-size: 2.5em;
-}
-.startBtn{
-    padding: 1em;
-    font-size: xx-large;
-    background-color: #ffe8bc;
-    border: none;
-    border-radius: 5px;
-    color:#5D8417;
-}
-.startBtn:active{
-    background-color: #f5a40a;
-    color: aliceblue;
-}
-body{
-    background-color: #000047;
-    color: #f0f0f0;
-    text-align: center;
-}</style>
+    <link rel="stylesheet" href="styles.css">
     <title>Timer Page</title>
 </head>
 
@@ -54,54 +25,7 @@ body{
 
 
 
-    <script type="text/javascript">
-    var study = true
-        var time = 0;
-        var breakTime = 0;
-
-
-        const timeLeft = () => {
-            let hook = document.getElementById("timer")
-            if (study) {
-                time += 1
-                hook.innerHTML = 1500 - time
-            }
-            else {
-                breakTime += 1
-                hook.innerHTML = 600 - breakTime
-            }
-
-        }
-        const changeHeader = () => {
-            let hook = document.getElementById("header");
-            study ? hook.innerHTML = "It's time to study be gone!" : hook.innerHTML = "It's break time go wild!"
-        }
-
-
-        const start = () => {
-            changeHeader();
-            window.setInterval(function () {
-                if (time < 25 && study || breakTime < 10 && !study) {
-                    timeLeft();
-
-
-                }
-                else if (time === 25 && study) {
-                    document.getElementById("alarm").play();
-                    study = false;
-                    time = 0;
-                    changeHeader();
-                }
-                else if (!study && breakTime === 10) {
-                    document.getElementById("alarm").play();
-                    study = true;
-                    breakTime = 0;
-                    changeHeader()
-                }
-
-
-            }, 1000)
-        }</script>
+<script src="scripts.js"></script>
 </body>
 
 </html>

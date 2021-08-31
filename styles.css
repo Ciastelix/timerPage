@@ -1,0 +1,30 @@
+.header {
+  font-size: 3em;
+  clear: both;
+  width: 100%;
+  text-align: center;
+}
+.time {
+  font-size: 2em;
+  clear: both;
+}
+.timer {
+  font-size: 2.5em;
+}
+.startBtn {
+  padding: 1em;
+  font-size: xx-large;
+  background-color: #ffe8bc;
+  border: none;
+  border-radius: 5px;
+  color: #5d8417;
+}
+.startBtn:active {
+  background-color: #f5a40a;
+  color: aliceblue;
+}
+body {
+  background-color: #000047;
+  color: #f0f0f0;
+  text-align: center;
+}
