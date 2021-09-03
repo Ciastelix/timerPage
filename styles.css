@@ -11,6 +11,11 @@
 .timer {
   font-size: 2.5em;
 }
+ul,
+li {
+  list-style: none;
+  margin: 5px;
+}
 .startBtn {
   padding: 1em;
   font-size: xx-large;
